@@ -1,9 +1,11 @@
 @use '../core/variables' as vars;
 
-body {
-    padding: 2rem;
-    height: 100vh;
-    background-image: url('../images/bg-adalab.png');
-    background-color: vars.$color-bg;
-    font-family: vars.$font-main;
+.button {
+    padding: 10px;
+    border: 5px;
+    background-color: red;
+}
+
+.disabled {
+    opacity: 0.5;
 }
