@@ -34,3 +34,9 @@ myButton.addEventListener("click", (event) => {
     console.log ("Haz hecho clic");
     myButton.classList.toggle("change")
 });
+
+const myLorem = document.querySelector (".lorem");
+myLorem.addEventListener("click", (event) => {
+    console.log ("Haz hecho clic");
+    myLorem.classList.toggle("lorem")
+});
