@@ -29,4 +29,4 @@ textInput.addEventListener("change", (event) => {console.log ("Estas escribiendo
     document.querySelector('.hello').innerHTML = "Hola! "+event.target.value;
 });
 
-
+document.querySelector (".change-button") .classList.toggle("change");
