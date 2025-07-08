@@ -40,3 +40,15 @@ myLorem.addEventListener("click", (event) => {
     console.log ("Haz hecho clic");
     myLorem.classList.toggle("lorem")
 });
+
+const buttonSubmit = document.querySelector(".submit-name");
+buttonSubmit.addEventListener("click", (event) => {
+    event.preventDefault();
+    const userName = document.querySelector(".input-conditional").value.toLowerCase();
+    console.log ("userName", userName);
+    if (userName === "maria" || userName === "luisa") {
+        document.querySelector('.welcome').innerHTML = "Bienvenida, " + userName;
+    } else { 
+        document.querySelector('.welcome').innerHTML = "Lo siento no estás registrado";
+    }
+});
