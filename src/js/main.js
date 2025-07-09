@@ -31,6 +31,7 @@ textInput.addEventListener("change", (event) => {console.log ("Estas escribiendo
 
 const myButton = document.querySelector (".change-button");
 myButton.addEventListener("click", (event) => {
+    event.preventDefault();
     console.log ("Haz hecho clic");
     myButton.classList.toggle("change")
 });
@@ -52,6 +53,7 @@ buttonSubmit.addEventListener("click", (event) => {
         document.querySelector('.welcome').innerHTML = "Lo siento no estás registrado";
     }
 });
+
 const number = 0;
 if (number <1 && number > -1) {
   console.log('El número es 0');
