@@ -90,3 +90,18 @@ if (number <1 && number > -1) {
 
         console.log (2 * 5 + 3 * 2 + 0.5 * 4);
         console.log ("con constantes:", 2 * kiwis + 3 * peras + 0.5 * uvas);
+
+//4. Calcular el número total de horas que hemos vivido. Crea un programa que nos diga cuántas horas en total hemos vivido. Por ejemplo, si alguien tiene 60 años, este código debería mostrar un mensaje con el número 525600.
+
+const horas = 24
+const dias = 365
+const edad = 60
+
+console.log ( ( horas * dias ) * ( edad ) );
+
+// 5. Lista de perretes. Pinta tres elementos li dentro de una lista ul con la información de gatitos: un nombre y una foto.
+
+const firstDogName = 'Dina'
+const firstDogImage = 'https://images.dog.ceo/breeds/schipperke/n02104365_8156.jpg'
+
+document.querySelector(".dog").innerHTML = `<li><p>${firstDogName}</p><img src="${firstDogImage}"/></li>`;
