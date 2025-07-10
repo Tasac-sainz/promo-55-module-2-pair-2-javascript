@@ -66,3 +66,27 @@ if (number <1 && number > -1) {
 } else (number !==123123125);  {
   console.log('el número no es 123123125')
 }
+
+//EJERCICIOS TIPO DE DATOS
+//EJERCICIO 1: TRASTEANDO LA CONSOLA:
+// Abre la consola y haz las siguientes pruebas:
+        //Realiza una suma sencilla con nuestro número favorito y el de nuestra compañera y pulsa Intro.
+        //Haz lo mismo, pero guardando los números en constantes y utilizando estas para sumar.
+    
+        const numberMica = 8
+        const numberKaren = 22
+        const numberTania = 10
+
+        console.log (numberMica + numberKaren + numberTania);
+
+//EJERCICIO 2: DAYANA MOLA
+        const superWave = document.querySelector(".super-wave").classList.add("superWaveChange");
+        console.log(".superWaveChange");
+  
+//EJERICIO 3: PRECIO DE LA FRUTA
+        const kiwis = 5;
+        const peras = 2;
+        const uvas = 4;
+
+        console.log (2 * 5 + 3 * 2 + 0.5 * 4);
+        console.log ("con constantes:", 2 * kiwis + 3 * peras + 0.5 * uvas);
