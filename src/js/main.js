@@ -104,4 +104,10 @@ console.log ( ( horas * dias ) * ( edad ) );
 const firstDogName = 'Dina'
 const firstDogImage = 'https://images.dog.ceo/breeds/schipperke/n02104365_8156.jpg'
 
-document.querySelector(".dog").innerHTML = `<li><p>${firstDogName}</p><img src="${firstDogImage}"/></li>`;
+const secondDogName = "Luna"
+const secondDogImage = "https://images.dog.ceo/breeds/collie-border/n02106166_355.jpg"
+
+const thirdDogName = "Lana"
+const thirdDogImage = "https://images.dog.ceo/breeds/affenpinscher/n02110627_7065.jpg"
+
+document.querySelector(".dog").innerHTML = `<li><p>${firstDogName}</p><img src="${firstDogImage}"/></li> <li><p>${secondDogName}</p><img src="${secondDogImage}"/></li><li><p>${thirdDogName}</p><img src="${thirdDogImage}"/></li>`;

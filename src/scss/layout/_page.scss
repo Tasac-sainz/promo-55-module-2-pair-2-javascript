@@ -1,5 +1,9 @@
 @use '../core/variables' as vars;
 
+.body {
+    padding: 30px;
+}
+
 .button {
     padding: 10px;
     border: 5px;
