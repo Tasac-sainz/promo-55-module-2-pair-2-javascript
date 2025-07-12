@@ -139,5 +139,70 @@ function esPar(numero) {
   return numero % 2 === 0;
 }
 
-const resultado = esPar(6);
-console.log(resultado);
+const resultado1 = esPar(7);
+console.log("Es par?", resultado1);
+
+//Ejercicio 2 Ticket con IVA
+//Crea una función que reciba por parámetro un número, que representará un precio, y devuelva un texto en el que ponga el precio sin IVA, el IVA (21%) y el total. Por ejemplo, si pasamos por parámetro un 10, la función pintará en la consola "Precio sin IVA: 10, IVA: 2,1 y Total: 12,1".
+
+//Para probar que funciona, ejecuta la función recogiendo el resultado en una variable e imprímela en la consola para comprobarlo.
+
+console.log ("*****************")
+
+
+const getPrice = (price) => {
+  const IVAPercentage = 21 
+  const totalIVA = price * IVAPercentage /100 
+  const totalPrice = price + totalIVA
+  console.log (`El precio sin IVA es: ${price}€, el IVA es ${IVAPercentage}%, Total ${totalPrice}€`)
+}
+getPrice(10)
+console.log ("*****************")
+//ejercicio 3 variables globales
+
+// modificamos una variable de ámbito global
+let secretLetter = 'y';
+function mySecretLetter() {
+  secretLetter = 'x';
+  return secretLetter;
+}
+console.log(secretLetter); // devuelve "x"
+console.log(mySecretLetter()); // devuelve "x"
+
+//ejercicio extra: querySelector para todas
+function getEl (selector) {
+  const element = document.querySelector(selector);
+  if (!element) {
+    console.warn(`No se encontró ningún elemento con el selector: "${selector}"`);
+  }
+  return element;
+}
+// const btnEl = getEl('.btn');
+const lineOne = getEl('.line-one');
+const span = getEl('.line-two');
+
+lineOne.innerHTML ="Esto lo que es es un lío de tres pares de narices";
+getEl('.btn').style.backgroundColor = "red";
+span.innerHTML = "Pero no pasa nada, confiamos en el proceso";
+span.style.color = "black";
+
+getEl('.dudle')
+
+
+
+//ejercicio combinando funciones
+
+function esPar(numero) {
+  return numero % 2 === 0;
+}
+
+const resultado = esPar(7);
+
+const textContent = getEl(".combine").textContent;
+const textContentNumber= parseInt(textContent);
+
+if (esPar(textContentNumber)){
+  console.log("Este número es par")
+} else {
+  console.log("Este número es impar")
+}
