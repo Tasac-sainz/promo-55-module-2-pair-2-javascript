@@ -130,3 +130,14 @@ function media (a,b,c,d) {
 }
 media (1,2,3,4);
 const resultMedia = media(1,2,3,4)
+
+//Ejercicio 3 
+// Crear una función que reciba por parámetro un número y devuelva true si es par y false si es impar. Ejecútala e imprime el resultado para comprobar que funciona.
+
+function par (a, b) {
+ console.log (a + b)
+ return a + b;
+}
+par (1+2);
+const resultPar = par (true, false);
+console.log (!!resultPar);
