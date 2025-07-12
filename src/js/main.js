@@ -111,3 +111,22 @@ const thirdDogName = "Lana"
 const thirdDogImage = "https://images.dog.ceo/breeds/affenpinscher/n02110627_7065.jpg"
 
 document.querySelector(".dog").innerHTML = `<li><p>${firstDogName}</p><img src="${firstDogImage}"/></li> <li><p>${secondDogName}</p><img src="${secondDogImage}"/></li><li><p>${thirdDogName}</p><img src="${thirdDogImage}"/></li>`;
+
+// LECCIÓN 2.5 FUNCIONES
+// Ejercicio 1 Crea una función que reciba como argumentos dos valores y devuelva como valor de retorno la multiplicación de ambos. Haz tres pruebas con distintos números para comprobar que funciona correctamente y muestra el resultado en la consola usando console.log().
+
+function multiplicar (a, b, c) {
+	console.log(a*b+c);
+	return a * b + c;
+}
+multiplicar(2, 4, 1);
+const resultMultiplicar = multiplicar(2,4,1)
+
+// Ejercicio 2 Crea una función con 4 parámetros numéricos que devuelva como valor la media de todos ellos. Haz tres pruebas con distintos números para comprobar que funciona correctamente y muestra el resultado en la consola.
+
+function media (a,b,c,d) {
+  console.log(a+b+c+d/4)
+  return a+b+c+d/4;
+}
+media (1,2,3,4);
+const resultMedia = media(1,2,3,4)
