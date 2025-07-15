@@ -206,3 +206,10 @@ if (esPar(textContentNumber)){
 } else {
   console.log("Este número es impar")
 }
+
+const adalaber1 = {
+  adaname: "Susana",
+  age: 34,
+  job: "periodista",
+};
+console.log(`Mi nombre es ${adaname}, tengo ${age} años y soy ${job}`)
