@@ -260,8 +260,11 @@ user.job = job;
 
 console.log(user)
 
-
-
+user.firstName = "Andrea";
+user.addAge = () => {
+  user.age = user.age + 1;
+}
+user.addAge ();
 
 
 
