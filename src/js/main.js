@@ -212,4 +212,47 @@ const adalaber1 = {
   age: 34,
   job: "periodista",
 };
-console.log(`Mi nombre es ${adaname}, tengo ${age} años y soy ${job}`)
+console.log(`Mi nombre es ${adalaber1.adaname}, tengo ${adalaber1.age} años y soy ${adalaber1.job}`);
+
+const adalaber2 = {
+  adaname: "Rocío",
+  age: 25,
+  job: "actriz",
+  showBio: () => {
+    console.log(`Mi nombre es ${adalaber2.adaname}, tengo ${adalaber2.age} años y soy ${adalaber2.job}`);
+  }
+};
+
+
+console.log ("**********************")
+//2. A la carrera
+
+const adalaber3 = {
+  adaname: "Susana",
+  age: 34,
+  job: "periodista",
+  run: () => {
+    console.log ("Estoy corriendo");
+  },
+  runAMarathon: (distance) =>  {
+    console.log (`Estoy corriendo un maratón de ${distance} kilómetros`);
+  },
+  showBio: () => {
+    console.log (`Mi nombre es ${adalaber3.adaname}, tengo ${adalaber3.age} años y soy ${adalaber3.job}`);
+  },
+};
+
+adalaber3.run();
+adalaber3.runAMarathon (50);
+adalaber3.showBio ();
+adalaber2.showBio();
+
+console.log ("**********************")
+
+
+
+
+
+
+
+
