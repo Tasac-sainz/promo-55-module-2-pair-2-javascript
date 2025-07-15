@@ -250,6 +250,16 @@ adalaber2.showBio();
 console.log ("**********************")
 
 
+const user = {
+}
+const job = "developer";
+user.firstName = "Juan";
+user.lastName = "Perez";
+user.age = 50;
+user.job = job;
+
+console.log(user)
+
 
 
 
