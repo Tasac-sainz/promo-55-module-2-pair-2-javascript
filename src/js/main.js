@@ -2,33 +2,44 @@
 
 console.log('>> Ready :)');
 
-document.querySelector('h1').innerHTML = 'Esta página no es compatible con la versión actual de tu navegador. Por favor actualízalo a la versión más reciente';
+//1. Mensaje de navegador obsoleto
+document.querySelector('h2').innerHTML = 'Esta página no es compatible con la versión actual de tu navegador. Por favor actualízalo a la versión más reciente';
 
+//2. Hola Mundo
 document.querySelector('p').innerHTML = "Hola, mundo";
 
-document.querySelector('h2').innerHTML = "La Adalaber seleccionada es:";
+//3. Seleccionando Adalabers
+const title = document.querySelector(".title2");
+const alumn = document.querySelector(".first-element-li").textContent;
+title.innerHTML = title.textContent + " " + alumn;
 
-document.querySelector('ul').innerHTML = "<li>Tania</li>";
-
+//4. Lorem ipsum
 document.querySelector(".title").innerHTML = "lorem ipsum";
 document.querySelector(".image").src = "https://images.unsplash.com/photo-1600357077527-930ccbaf7773?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8";
 document.querySelector('.paragraph').innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit"
 
-
+//5. Arreglando errores
 let myAddress = 'Madrid, 28009';
 myAddress = 'Valladolid, 47009';
 document.querySelector(".address").innerHTML = myAddress;
 
+//6. Deshabilitando botones
 document.querySelector(".button")
 document.querySelector(".button").classList.add("disabled")
 
-let textInput = document.querySelector(".input");
-textInput.addEventListener("change", (event) => {console.log ("Estas escribiendo en el input");
-    textInput = event.target.value;
-    console.log ("valor del input dentro de la función", textInput);
-    document.querySelector('.hello').innerHTML = "Hola! "+event.target.value;
+//2.2. Eventos
+//1. ¿Cómo te llamas?
+const form = document.querySelector(".form")
+const input = document.querySelector(".input")
+const hello = document.querySelector(".hello");
+
+form.addEventListener("submit", (event) => {console.log ("Estas escribiendo en el input");
+    event.preventDefault();
+    const name = input.value;
+    hello.innerHTML = "Hola! " + name
 });
 
+//2. Cambia el estilo de un botón
 const myButton = document.querySelector (".change-button");
 myButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -36,11 +47,13 @@ myButton.addEventListener("click", (event) => {
     myButton.classList.toggle("change")
 });
 
+//3. dame ipsum
 const myLorem = document.querySelector (".lorem");
 myLorem.addEventListener("click", (event) => {
-    console.log ("Haz hecho clic");
-    myLorem.classList.toggle("lorem")
-});
+    const newText = document.createElement("p");
+    newText.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi in provident ad doloribus quae natus nisi perspiciatis veniam corrupti laborum libero quod, voluptate a eius. Culpa recusandae est obcaecati soluta."
+    event.target.insertAdjacentElement("afterend", newText);
+  });
 
 const buttonSubmit = document.querySelector(".submit-name");
 buttonSubmit.addEventListener("click", (event) => {
@@ -267,5 +280,14 @@ user.addAge = () => {
 user.addAge ();
 
 
+const movies = ["Pulp Fiction", "Noviembre", "Leaving Las Vegas"]
+const workWithMovies = () => { 
+console.log(movies);
 
+movies[3] = "Esperando la carroza";
+console.log(movies);
+
+movies[2] = "Shreck"; 
+};
+workWithMovies();
 
