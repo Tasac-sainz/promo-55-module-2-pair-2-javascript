@@ -54,7 +54,30 @@ myLorem.addEventListener("click", (event) => {
     newText.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi in provident ad doloribus quae natus nisi perspiciatis veniam corrupti laborum libero quod, voluptate a eius. Culpa recusandae est obcaecati soluta."
     event.target.insertAdjacentElement("afterend", newText);
   });
+//4. Información instantanea
+const inputInfo = document.querySelector (".input-conditional");
+const emptyParagraph = document.querySelector (".empty-paragraph");
 
+inputInfo.addEventListener ("input", (event) => {
+  const inChange =event.currentTarget.value;
+  emptyParagraph.innerHTML = inChange;
+})
+//5. Estilo para un botón
+const styleButton = document.querySelector (".styleButtoniz");
+const handleClick = () => {
+  styleButton.classList.toggle("styleButtonSecond");
+}
+styleButton.addEventListener ("click", handleClick);
+
+const styleButton2 = document.querySelector (".styleButtonde");
+const handleClick2 = () => {
+  styleButton2.classList.toggle("styleButtonSecond");
+}
+styleButton2.addEventListener ("click", handleClick2);
+
+
+// CONDICIONALES 
+// Ejercicio 1: control de acceso
 const buttonSubmit = document.querySelector(".submit-name");
 buttonSubmit.addEventListener("click", (event) => {
     event.preventDefault();
