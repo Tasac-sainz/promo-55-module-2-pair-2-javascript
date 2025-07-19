@@ -78,7 +78,7 @@ styleButton2.addEventListener ("click", handleClick2);
 
 // CONDICIONALES 
 // Ejercicio 1: control de acceso
-const buttonSubmit = document.querySelector(".submit-name");
+/* const buttonSubmit = document.querySelector(".submit-name");
 buttonSubmit.addEventListener("click", (event) => {
     event.preventDefault();
     const userName = document.querySelector(".input-conditional").value.toLowerCase();
@@ -88,7 +88,7 @@ buttonSubmit.addEventListener("click", (event) => {
     } else { 
         document.querySelector('.welcome').innerHTML = "Lo siento no estás registrado";
     }
-});
+}); */
 
 const number = 0;
 if (number <1 && number > -1) {
@@ -314,3 +314,7 @@ movies[2] = "Shreck";
 };
 workWithMovies();
 
+const acc = 0;
+for (let i = 0; i < 10; i++) {
+  console.log("El resultado es:" + [i+1])
+}
