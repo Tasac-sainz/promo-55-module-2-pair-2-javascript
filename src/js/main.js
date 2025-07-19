@@ -314,7 +314,32 @@ movies[2] = "Shreck";
 };
 workWithMovies();
 
-const acc = 0;
+// 2.9 BUCLES
+// 1. Practicando
+const acc1 = 0;
 for (let i = 0; i < 10; i++) {
   console.log("El resultado es:" + [i+1])
 }
+console.log ("*****************************************")
+
+//2. La media:
+
+const numbers = [1,5,9,7,4];
+let acc = 0;
+for (let i = 0; i < numbers.length; i++) {
+  acc = acc + numbers [i];
+  console.log (acc);
+}
+const average = (acc, length) => {
+  const average = acc/length;
+  return average;
+   };
+const resultAverage = average(acc, numbers.length);
+console.log (resultAverage);
+
+//añadir un número al array:
+numbers.push (3);
+const resultAverage2 = average(acc, numbers.length);
+console.log (resultAverage2);
+
+console.log ("*****************************************")
