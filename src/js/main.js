@@ -351,6 +351,7 @@ const buttonBook = document.querySelector(".button--book");
 const paragraphBook = document.querySelector(".paragraph--book");
 
 const books = [];
+
 const handleClick = () => {
   console.log ("has hecho click");
   const resultOne = inputOne.value;
