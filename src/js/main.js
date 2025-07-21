@@ -64,10 +64,10 @@ inputInfo.addEventListener ("input", (event) => {
 })
 //5. Estilo para un botón
 const styleButton = document.querySelector (".styleButtoniz");
-const handleClick = () => {
+const handleClick1 = () => {
   styleButton.classList.toggle("styleButtonSecond");
 }
-styleButton.addEventListener ("click", handleClick);
+styleButton.addEventListener ("click", handleClick1);
 
 const styleButton2 = document.querySelector (".styleButtonde");
 const handleClick2 = () => {
@@ -343,3 +343,25 @@ const resultAverage2 = average(acc, numbers.length);
 console.log (resultAverage2);
 
 console.log ("*****************************************")
+
+// 3. Tenemos mucho en común
+const inputOne = document.querySelector(".input--one");
+const inputTwo = document.querySelector(".input--two");
+const buttonBook = document.querySelector(".button--book");
+const paragraphBook = document.querySelector(".paragraph--book");
+
+const books = [];
+const handleClick = () => {
+  console.log ("has hecho click");
+  const resultOne = inputOne.value;
+  const resultTwo = inputTwo.value;
+  books.push(resultOne, resultTwo);
+  for (const book of books){
+    paragraphBook.innerHTML+=(" A mí también me encantó " + book)
+  }
+};
+buttonBook.addEventListener("click", handleClick);
+  for (const book of books){
+    paragraphBook.innerHTML+=(" A mí también me encantó " + book)
+  }
+
