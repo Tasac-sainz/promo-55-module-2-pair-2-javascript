@@ -437,9 +437,7 @@ console.log(users2);
 //UN CALLBACK EXTRA
 
 const scores = [5, 10, 15, 20, 25];
-const callBack = (score) => {
-  return score * 2;
-};
+const callBack = score => score * 2;
 
 const finalPoint = scores.map(callBack);
 console.log(finalPoint);
