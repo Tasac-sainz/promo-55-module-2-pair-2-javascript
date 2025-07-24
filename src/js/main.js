@@ -366,3 +366,80 @@ buttonBook.addEventListener("click", handleClick);
     paragraphBook.innerHTML+=(" A mí también me encantó " + book)
   }
 
+//EJERCICIOS MÉTODOS FUNCIONALES ARRAYS
+//1. Inflar las notas
+const marks = [5,4,6,7,9];
+const inflateMarks = marks.map(mark => mark + 1);
+console.log("las notas de las alumnas han sido " + inflateMarks);
+
+//2. Saludar es de buena educación
+const names = ["María", "Lucía", "Susana", "Rocío", "Inmaculada"];
+const nameHello = names.map(name => console.log("Bienvenida " + name));
+
+console.log("*********")
+
+//3. Gracias por confiar en nosotros
+const users = [
+{ name: "María", isPremium: false },
+{ name: "Lucía", isPremium: true },
+{ name: "Susana", isPremium: true },
+{ name: "Rocío", isPremium: false },
+{ name: "Inmaculada", isPremium: false },
+];
+
+const premium = users.map(user => {
+  if (user.isPremium === true) {console.log("Bienvenida " + user.name + " gracias por confiar en nosotras")} 
+  else {console.log("Bienvenida " + user.name)}
+});
+
+// EJERCICIOS FILTER
+// 1. Solo los premium. Utilizamos el array de la linea 382
+
+const premiumUsers = users.filter(user => {
+  if (user.isPremium === true) {console.log("solo usuarios premium " + user.name)}
+});
+
+// 2. Los pares pueden entrar
+
+const pins = [2389, 2384, 2837, 5232, 8998];
+const parPins = pins.filter(pin => {
+  if (pin % 2 === 0) {console.log("solo los pares pueden entrar " + pin)}
+});
+
+//3. Los usuarios que pueden entrar
+
+const users2 = [
+{ name: "María", isPremium: false, pin: 2389 },
+{ name: "Lucía", isPremium: true, pin: 2384 },
+{ name: "Susana", isPremium: true, pin: 2837 },
+{ name: "Rocío", isPremium: false, pin: 5232 },
+{ name: "Inmaculada", isPremium: false, pin: 8998 },
+];
+
+console.log("*********")
+
+
+const onlyPair = users2.filter(user => {
+  return user.pin % 2 === 0;
+});
+console.log(onlyPair);
+
+//4. Utilizamos el array de la linea 411
+
+const findedUser = users2.find(user => user.pin === 5232);
+console.log(findedUser);
+
+const deletedUser = users2.findIndex(user => user.pin === 5232);
+const arraySplice= users2.splice(deletedUser, 1);
+console.log(arraySplice);
+console.log(users2);
+
+//UN CALLBACK EXTRA
+
+const scores = [5, 10, 15, 20, 25];
+const callBack = (score) => {
+  return score * 2;
+};
+
+const finalPoint = scores.map(callBack);
+console.log(finalPoint);
