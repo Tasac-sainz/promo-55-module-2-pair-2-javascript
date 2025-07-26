@@ -441,3 +441,50 @@ const callBack = score => score * 2;
 
 const finalPoint = scores.map(callBack);
 console.log(finalPoint);
+
+//EJERCICIOS DE PETICIONES AL SERVIDOR
+console.log("*********** PETICIONES AL SERVIDOR ***********");
+//EJERCICIO 1: NÚMERO ALEATORIO
+fetch ("https://api.rand.fun/number/integer")  
+.then((response) => response.json())
+.then((data) => {
+  console.log(data);
+});
+//EJERCICIO 2: CHIHUAHUAS
+
+const btnChihuahua = document.querySelector (".btn-chihuahua");
+const imageChihuahua = document.querySelector (".pic-chihuahua");
+
+const getChihuahua = () => {
+  fetch ("https://dog.ceo/api/breed/chihuahua/images/random")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    imageChihuahua.src = data.message;
+  });
+};
+
+btnChihuahua.addEventListener ("click", getChihuahua);
+
+//EJERCICIO 3: usuarias GitHub
+
+let inputGit = document.querySelector (".input-git");
+const btnGit = document.querySelector (".btn-git");
+const gitAvatar = document.querySelector (".info-data-avatar");
+const gitName = document.querySelector (".info-data-name");
+const gitRepositories = document.querySelector (".info-data-repositories");
+
+// CÓMO CAPTAMOS EL CONTENIDO DEL INPUT PARA QUE EN FUNCIÓN DE ÉL NOS DEVUELVA LOS DATOS QUE QUEREMOS DE FETCH
+// const textInputGit = inputGit.textContent;
+// console.log (textInputGit);
+ 
+const handleClickGit = () => {
+fetch ("https://api.github.com/users/micaelaalvarezj")
+.then ((response) => response.json ())
+.then ((data) => {
+  console.log (data);
+
+  });
+  };
+
+btnGit.addEventListener 
