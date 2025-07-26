@@ -1,5 +1,7 @@
 'use strict';
 
+const { createElement } = require("react");
+
 console.log('>> Ready :)');
 
 //1. Mensaje de navegador obsoleto
@@ -492,6 +494,4 @@ const handleClickGit = () => {
     
     btnGit.addEventListener ("click", handleClickGit);
     
-    //EJERCICIO 4: Pintando varias imágenes
-
-    
+    //EJERCICIO 4: Pintando varias imágenes (se queda pendiente de resolver)    
