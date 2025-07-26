@@ -489,5 +489,9 @@ const handleClickGit = () => {
         };
     console.log (data);
     })}
+    
+    btnGit.addEventListener ("click", handleClickGit);
+    
+    //EJERCICIO 4: Pintando varias imágenes
 
-btnGit.addEventListener ("click", handleClickGit);
+    
