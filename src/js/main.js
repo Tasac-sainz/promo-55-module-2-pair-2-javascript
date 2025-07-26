@@ -468,23 +468,26 @@ btnChihuahua.addEventListener ("click", getChihuahua);
 
 //EJERCICIO 3: usuarias GitHub
 
-let inputGit = document.querySelector (".input-git");
+const inputGit = document.querySelector (".input-git");
 const btnGit = document.querySelector (".btn-git");
 const gitAvatar = document.querySelector (".info-data-avatar");
 const gitName = document.querySelector (".info-data-name");
 const gitRepositories = document.querySelector (".info-data-repositories");
 
-// CÓMO CAPTAMOS EL CONTENIDO DEL INPUT PARA QUE EN FUNCIÓN DE ÉL NOS DEVUELVA LOS DATOS QUE QUEREMOS DE FETCH
-// const textInputGit = inputGit.textContent;
-// console.log (textInputGit);
  
 const handleClickGit = () => {
-fetch ("https://api.github.com/users/micaelaalvarezj")
-.then ((response) => response.json ())
-.then ((data) => {
-  console.log (data);
+  const textInputGit = inputGit.value;
+  fetch (`https://api.github.com/users/${textInputGit}`)
+    .then ((response) => response.json ())
+    .then ((data) => {
+    if (data.status === "404") {
+      alert ("Ese usuario no existe, mala suerte!")
+        } else {
+    gitAvatar.src = data["avatar_url"];
+    gitName.innerHTML = data.name;
+    gitRepositories.innerHTML = data["public_repos"] ;      
+        };
+    console.log (data);
+    })}
 
-  });
-  };
-
-btnGit.addEventListener 
+btnGit.addEventListener ("click", handleClickGit);
