@@ -1,7 +1,5 @@
 'use strict';
 
-const { createElement } = require("react");
-
 console.log('>> Ready :)');
 
 //1. Mensaje de navegador obsoleto
@@ -495,3 +493,34 @@ const handleClickGit = () => {
     btnGit.addEventListener ("click", handleClickGit);
     
     //EJERCICIO 4: Pintando varias imágenes (se queda pendiente de resolver)    
+
+    // DOM
+
+const listDOM = document.querySelector(".list-DOM");
+const numbersDOM = [1, 2, 3];
+numbersDOM.forEach(number => {
+  const newItem = document.createElement("li");
+  const newContent = document.createTextNode(number);
+  newItem.appendChild(newContent);
+  listDOM.appendChild(newItem);
+});
+console.log(listDOM);
+
+// De viaje
+
+const selectCity = document.querySelector(".select-city");
+const container = document.querySelector(".containerDOM");
+const madrid = ["https://images.pexels.com/photos/930595/pexels-photo-930595.jpeg","https://images.pexels.com/photos/3757144/pexels-photo-3757144.jpeg","https://images.pexels.com/photos/3757136/pexels-photo-3757136.jpeg"];
+const londres = ["https://www.pexels.com/es-es/foto/paisaje-urbano-de-londres-460672/","https://media.istockphoto.com/id/1388339818/es/foto/una-cl%C3%A1sica-cabina-telef%C3%B3nica-roja-frente-a-la-torre-del-reloj-del-big-ben-en-londres.jpg?b=1&s=612x612&w=0&k=20&c=eqzLAZnDgFCiY7PZlLnyAuXyvKutv_aQtAatKhr5DAg=","https://www.pexels.com/es-es/foto/bulliciosa-calle-londinense-con-autobuses-y-ciclistas-33153405/"];
+const paris = ["https://www.pexels.com/es-es/foto/encantadora-escena-callejera-en-montmartre-paris-33183655/","https://media.istockphoto.com/id/1185953092/es/foto/la-principal-atracci%C3%B3n-de-par%C3%ADs-y-toda-europa-es-la-torre-eiffel-en-los-rayos-de-la-puesta-de.jpg?b=1&s=612x612&w=0&k=20&c=RIuMaa99sinnbE2fPpyV3IDfUYuHmXT1jU9_CtUG21s=","https://www.pexels.com/es-es/foto/museo-del-vidrio-transparente-durante-la-hora-dorada-2363/"];
+
+
+const handleClickCity = () => {
+  console.log(selectCity.value);
+if(selectCity.value === "Madrid"){madrid.forEach ((url) => {
+  const img1 = document.createElement("img");
+  img1.setAttribute("src", url);
+  container.appendChild(img1);
+})};
+};
+selectCity.addEventListener("input", handleClickCity);
